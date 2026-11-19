@@ -191,8 +191,8 @@ ul.ma-liste {
 
 .plateau img {
   background-color: var(--couleur-bg);
-  width: 10vh;
-  height: 10vh;
+  width: 15vh;
+  height: 15vh;
 
   padding: 1vh;
   border: 2px solid yellow;
