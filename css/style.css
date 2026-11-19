@@ -1,0 +1,314 @@
+:root {
+  --couleur-bg: #fffdb9;
+  --couleur-secondaire: #8080806b;
+  --couleur-reussite: rgb(1, 255, 1);
+  --blanc: white;
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Intel+One+Mono:ital,wght@0,300..700;1,300..700&display=swap");
+
+/* ------------------------------- */
+/* ------------------------------- */
+/* ------------------------------- */
+/* ---------Styles généraux------- */
+/* ------------------------------- */
+/* ------------------------------- */
+/* ------------------------------- */
+
+body {
+  width: 100vw;
+  background-color: var(--couleur-bg);
+}
+
+.intel-one-mono {
+  font-family: "Intel One Mono", monospace;
+  font-optical-sizing: auto;
+
+  font-style: normal;
+}
+
+h1 {
+  font-size: 5vw;
+  text-align: center;
+  padding-block: 2vh;
+}
+
+header ul {
+  display: flex;
+  align-items: center;
+  gap: 3vw;
+}
+
+footer div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5vw;
+}
+
+nav {
+  background-color: var(--couleur-secondaire);
+  padding: 2vw;
+  color: var(--blanc);
+  font-size: 1vw;
+}
+h2 {
+  text-decoration: underline;
+}
+
+h2,
+p {
+  font-size: 1vw;
+}
+
+.btn_style {
+  text-decoration: none;
+  color: var(--blanc);
+}
+
+/* ------------------------------- */
+/* ------------------------------- */
+/* ------------------------------- */
+/* -------Styles main------------- */
+/* ------------------------------- */
+/* ------------------------------- */
+/* ------------------------------- */
+
+.container {
+  width: 100%;
+  max-width: 80vw;
+  margin-inline: auto;
+  margin-block: 4vh;
+  padding: 1rem;
+}
+
+.box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 1vw;
+  background-color: var(--couleur-secondaire);
+  padding: 1rem;
+  gap: 1rem;
+  border-radius: 1rem;
+  box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.37);
+}
+
+ul.ma-liste {
+  list-style-type: disc;
+  padding-left: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1vh;
+}
+
+.container img {
+  border-radius: 10px;
+  max-height: 40vh;
+}
+/* ------------------------------- */
+/* ------------------------------- */
+/* ------------------------------- */
+/* -------Styles Form Jeu ---------*/
+/* ------------------------------- */
+/* ------------------------------- */
+/* ------------------------------- */
+.styleFormJeu fieldset {
+  padding: 2vw;
+  border: 2px dotted var(--blanc);
+  border-radius: 1rem;
+}
+
+.styleFormJeu form {
+  display: flex;
+  justify-content: center;
+  gap: 1vh;
+  flex-direction: column;
+}
+
+.styleFormJeu label,
+.styleFormJeu input,
+.styleFormJeu legend {
+  font-size: 1vw;
+}
+.styleFormJeu input {
+  padding: 0.3rem;
+  border-radius: 5px;
+  border: var(--couleur-secondaire);
+}
+
+.styleFormJeu input:focus {
+  outline: none;
+}
+
+.options-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+}
+
+.option-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.option-item input[type="checkbox"] {
+  margin: 0;
+  cursor: pointer;
+}
+
+.option-item label {
+  cursor: pointer;
+  user-select: none;
+}
+
+/* ------------------------------- */
+/* ------------------------------- */
+/* ------------------------------- */
+/* -------Styles Plateau Jeu-------*/
+/* ------------------------------- */
+/* ------------------------------- */
+/* ------------------------------- */
+
+.plateau {
+  background: #fffdb9;
+  background: linear-gradient(
+    162deg,
+    var(--couleur-bg) 0%,
+    var(--couleur-secondaire) 75%
+  );
+  max-height: 70%;
+  border-radius: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+
+  padding: 1rem;
+  gap: 1rem;
+}
+
+.plateau img {
+  background-color: var(--couleur-bg);
+  width: 10vh;
+  height: 10vh;
+
+  padding: 1vh;
+  border: 2px solid yellow;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.37);
+}
+
+.plateau img:hover {
+  border: 2px solid blue;
+  scale: 1.05;
+  transition: ease-in 0.3s;
+}
+
+.bg-reussite {
+  background-color: var(--couleur-reussite) !important;
+  border: 2px solid var(--blanc) !important;
+}
+
+.retourne {
+  transform: rotateY(180deg);
+  transform-style: preserve-3d;
+}
+
+#btn-reset {
+  padding: 0.5rem 1rem 0.5rem 1rem;
+  border-radius: 0.5rem;
+  border: none;
+  color: var(--blanc);
+  background-color: rgba(255, 0, 0, 0.493);
+}
+#btn-reset:hover {
+  scale: 1.05;
+  transition: ease-in 0.3s;
+  border: var(--blanc);
+  color: black;
+  background-color: rgba(208, 255, 0, 0.877);
+}
+
+/* ------------------------------- */
+/* ------------------------------- */
+/* ------------------------------- */
+/*---------Styles Formulaires--------
+-------Inscription / Se connecter */
+/* ------------------------------- */
+/* ------------------------------- */
+/* ------------------------------- */
+
+.cible fieldset {
+  padding: 2vw;
+  border: 2px dotted var(--couleur-secondaire);
+  border-radius: 1rem;
+}
+
+.cible form {
+  display: flex;
+  justify-content: center;
+
+  flex-direction: column;
+}
+.cible label,
+.cible input,
+.cible legend {
+  font-size: 1vw;
+}
+
+.cible input {
+  margin-top: 5px;
+  padding: 0.3rem;
+  border-radius: 5px;
+  border: 1px dotted var(--couleur-secondaire);
+  margin-bottom: 2vh;
+}
+
+.cibleinput:hover {
+  border: 1px solid var(--couleur-secondaire);
+}
+.cible input:focus {
+  border: 1px solid var(--couleur-secondaire);
+  outline: none;
+}
+
+.flex-force {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1vh;
+}
+
+.box-force {
+  border: 1px solid var(--couleur-secondaire);
+  padding: 0.5vh 10vw 0.5vh 10vw;
+}
+
+.flex-force p {
+  text-align: center;
+  padding-top: 1vh;
+}
+
+/* ------------------------------- */
+/* ------------------------------- */
+/* ------------------------------- */
+/* ---------Styles Profil--------- */
+/* ------------------------------- */
+/* ------------------------------- */
+/* ------------------------------- */
+
+#generationProfil div {
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+#generationProfil p {
+  width: 30%;
+}
+
+.test {
+  text-align: right;
+  margin-right: 1rem;
+}
