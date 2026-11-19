@@ -1,0 +1,157 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Jeu Memory</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/gh/jgthms/minireset.css@master/minireset.min.css"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js"
+      integrity="sha512-STof4xm1wgkfm7heWqFJVn58Hm3EtS31XFaagaa8VMReCXAkQnJZ+jEy8PCC/iT18dFy95WcExNHFTqLyp72eQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script src="scripts/script.js" defer></script>
+  </head>
+  <body class="intel-one-mono">
+    <header>
+      <h1>Jeu - ENI - Memory</h1>
+      <nav>
+        <ul>
+          <li><a class="btn_style" href="index.html">Accueil</a></li>
+          <li><a class="btn_style" href="jeu.html">Jouer</a></li>
+          <li><a class="btn_style" href="profil.html">Profil</a></li>
+          <li><a class="btn_style" href="signup.html">Inscription</a></li>
+          <li><a class="btn_style" href="log.html">Se connecter</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main class="container">
+      <section class="box styleFormJeu">
+        <fieldset>
+          <legend>Génération du Plateau</legend>
+          <form action="" method="get" id="formPlateau">
+            <label for="nombre">Nombres de paires :</label>
+            <input
+              type="number"
+              name="nombre"
+              id="nombre"
+              min="2"
+              max="120"
+              step="1"
+              required
+              placeholder="Entre un nombre entre 2 et 120.
+          "
+            />
+
+            <p>Thèmes :</p>
+            <div class="options-grid">
+              <div class="option-item">
+                <input
+                  type="checkbox"
+                  name="valeur1"
+                  id="valeur1"
+                  value="legumes"
+                />
+                <label for="valeur1">Légumes (6 paires)</label>
+              </div>
+
+              <div class="option-item">
+                <input
+                  type="checkbox"
+                  name="valeur2"
+                  id="valeur2"
+                  value="animauxAnimes"
+                  checked
+                />
+                <label for="valeur2">Animaux Animés (8 paires)</label>
+              </div>
+
+              <div class="option-item">
+                <input
+                  type="checkbox"
+                  name="valeur3"
+                  id="valeur3"
+                  value="animauxDoms"
+                />
+                <label for="valeur3">Animaux Domestiques (10 paires)</label>
+              </div>
+
+              <div class="option-item">
+                <input
+                  type="checkbox"
+                  name="valeur4"
+                  id="valeur4"
+                  value="dinosaures"
+                />
+                <label for="valeur4">Dinosaures (10 paires)</label>
+              </div>
+
+              <div class="option-item">
+                <input
+                  type="checkbox"
+                  name="valeur5"
+                  id="valeur5"
+                  value="dinosauresNoms"
+                />
+                <label for="valeur5">Dinosaures avec noms (10 paires)</label>
+              </div>
+
+              <div class="option-item">
+                <input
+                  type="checkbox"
+                  name="valeur6"
+                  id="valeur6"
+                  value="chiens"
+                />
+                <label for="valeur6">Chiens (23 paires)</label>
+              </div>
+              <div class="option-item">
+                <input
+                  type="checkbox"
+                  name="valeur7"
+                  id="valeur7"
+                  value="alphabet"
+                />
+                <label for="valeur7">Alphabet (26 paires)</label>
+              </div>
+              <div class="option-item">
+                <input
+                  type="checkbox"
+                  name="valeur8"
+                  id="valeur8"
+                  value="animaux"
+                />
+                <label for="valeur8">Animaux (27 paires)</label>
+              </div>
+            </div>
+
+            <input type="submit" />
+          </form>
+        </fieldset>
+        <div>
+          <ul class="ma-liste">
+            <li>Entre le nombre de paires que tu veux trouver</li>
+            <li>Sélectionne autant de thèmes que tu souhaites</li>
+            <li>
+              /!\ Le total du nombre de paires des thèmes doit être supérieur ou
+              égal au nombre de paires sélectionnées
+            </li>
+            <li>
+              Appuie sur <em><strong>Espace</strong></em> pour recommencer une
+              partie.
+            </li>
+          </ul>
+        </div>
+      </section>
+      <br />
+      <section id="monPlateau"></section>
+    </main>
+  </body>
+</html>

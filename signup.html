@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Inscription Memory</title>
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/gh/jgthms/minireset.css@master/minireset.min.css"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js"
+      integrity="sha512-STof4xm1wgkfm7heWqFJVn58Hm3EtS31XFaagaa8VMReCXAkQnJZ+jEy8PCC/iT18dFy95WcExNHFTqLyp72eQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script src="scripts/script_forms.js" defer></script>
+  </head>
+  <body class="intel-one-mono">
+    <header>
+      <h1>Inscription - ENI - Memory</h1>
+      <nav>
+        <ul>
+          <li><a class="btn_style" href="index.html">Accueil</a></li>
+          <li><a class="btn_style" href="jeu.html">Jouer</a></li>
+          <li><a class="btn_style" href="profil.html">Profil</a></li>
+          <li><a class="btn_style" href="signup.html">Inscription</a></li>
+          <li><a class="btn_style" href="log.html">Se connecter</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main class="container cible">
+      <fieldset>
+        <legend>Inscription :</legend>
+        <form action="post" id="monForm">
+          <label for="nom">Identifiant : </label>
+          <input
+            type="text"
+            name="nom"
+            id="nom"
+            placeholder="John49487"
+            title="Saisissez votre Identifiant"
+            required
+          />
+
+          <label for="email">Email : </label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            placeholder="john.doe@mail.com"
+            title="Saisissez votre adresse email"
+            required
+          />
+
+          <label for="motdePasse">Mot de passe :</label>
+          <input
+            type="password"
+            id="motdePasse"
+            name="motdePasse"
+            pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
+            title="Saisissez votre mot de passe de minimum 8 caractères comportant
+          des lettres minuscules et majuscules et des chiffres"
+            required
+          />
+          <p>Force du mot de passe :</p>
+          <div class="flex-force">
+            <div>
+              <div class="box-force" id="faible"></div>
+              <p>Faible</p>
+            </div>
+            <div>
+              <div class="box-force" id="moyen"></div>
+              <p>Moyen</p>
+            </div>
+            <div>
+              <div class="box-force" id="fort"></div>
+              <p>Fort</p>
+            </div>
+          </div>
+
+          <label for="motdePasse">Confirmer mot de passe :</label>
+          <input
+            type="password"
+            id="verifmotdePasse"
+            name="verifmotdePasse"
+            pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
+            title="Saisissez votre mot de passe de minimum 8 caractères comportant
+          des lettres minuscules et majuscules et des chiffres"
+            required
+          />
+          <input type="submit" disabled id="envoyer" />
+        </form>
+      </fieldset>
+    </main>
+  </body>
+</html>

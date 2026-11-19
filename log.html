@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login Memory</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/gh/jgthms/minireset.css@master/minireset.min.css"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js"
+      integrity="sha512-STof4xm1wgkfm7heWqFJVn58Hm3EtS31XFaagaa8VMReCXAkQnJZ+jEy8PCC/iT18dFy95WcExNHFTqLyp72eQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script src="scripts/connexion.js" defer></script>
+  </head>
+  <body class="intel-one-mono">
+    <header>
+      <h1>Inscription - ENI - Memory</h1>
+      <nav>
+        <ul>
+          <li><a class="btn_style" href="index.html">Accueil</a></li>
+          <li><a class="btn_style" href="jeu.html">Jouer</a></li>
+          <li><a class="btn_style" href="profil.html">Profil</a></li>
+          <li><a class="btn_style" href="signup.html">Inscription</a></li>
+          <li><a class="btn_style" href="log.html">Se connecter</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main class="container cible">
+      <fieldset>
+        <legend>Inscription :</legend>
+        <form action="post" id="formLog">
+          <label for="nomLog">Identifiant : </label>
+          <input type="text" name="nomLog" id="nomLog" placeholder="John49487" title="Saisissez votre Identifiant"/>
+        <label for="motdePasseLog">Mot de passe :</label>
+        <input
+          type="password"
+          id="motdePasseLog"
+          name="motdePasseLog"
+          pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
+          title="Saisissez votre mot de passe de minimum 8 caractères comportant
+          des lettres minuscules et majuscules et des chiffres"
+        />
+        <p id="message"></p>
+      
+        <input type="submit">
+
+
+        </form>
+      </fieldset>
+    </main>
+   
+  </body>
+</html>
